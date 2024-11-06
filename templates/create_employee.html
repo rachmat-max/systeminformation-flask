@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Employee</title>
+</head>
+<body>
+    <h1>Create New Employee</h1>
+    <form action="{{ url_for('create_employee') }}" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="position">Position:</label><br>
+        <input type="text" id="position" name="position" required><br><br>
+
+        <label for="salary">Salary:</label><br>
+        <input type="text" id="salary" name="salary" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <a href="{{ url_for('index') }}">Back to Employee List</a>
+</body>
+</html>
